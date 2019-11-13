@@ -45,12 +45,6 @@ class StateMachine:
 			"quantidades": [],
 		}
 
-		
-		
-		pedidos = self.randomOrder()
-		for i in range(len(pedidos)):
-			print(pedidos[i], "\n")
-
 
 	def askQuestion(self, question):
 		res = question()
@@ -144,10 +138,13 @@ class StateMachine:
 			self.sugestao,
 			self.querMais,
 		]
+		pedidos = self.randomOrder()
+		for i in range(len(pedidos)):
+			print(pedidos[i], "\n")
 		
-		while not self.currentState > len (questions) - 1:
-			currentQuestion = questions[self.currentState]
-			self.askQuestion(currentQuestion)
+		# while not self.currentState > len (questions) - 1:
+		# 	currentQuestion = questions[self.currentState]
+			# self.askQuestion(currentQuestion)
 			
 			
 
